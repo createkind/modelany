@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ModelAny API - one endpoint for AI models (in development)</title>
+<meta name="description" content="The ModelAny API is a planned single gateway for language, image and video models: one key, one OpenAI-compatible request format, one balance. Not public yet.">
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="https://modelany.com/api/">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="ModelAny">
+<meta property="og:title" content="ModelAny API - one endpoint for AI models (in development)">
+<meta property="og:description" content="The ModelAny API is a planned single gateway for language, image and video models: one key, one OpenAI-compatible request format, one balance. Not public yet.">
+<meta property="og:url" content="https://modelany.com/api/">
+<script type="application/ld+json">[{"@context":"https://schema.org","@type":"WebPage","name":"ModelAny API - one endpoint for AI models (in development)","url":"https://modelany.com/api/","description":"The ModelAny API is a planned single gateway for language, image and video models: one key, one OpenAI-compatible request format, one balance. Not public yet.","isPartOf":{"@type":"WebSite","name":"ModelAny","url":"https://modelany.com/"}},{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ModelAny","item":"https://modelany.com/"},{"@type":"ListItem","position":2,"name":"API","item":"https://modelany.com/api/"}]}]</script>
+<style>
+:root{--bg:#fff;--fg:#111;--mut:#5c5c5c;--line:#e5e5e5;--card:#f6f6f6}
+@media(prefers-color-scheme:dark){:root{--bg:#0b0b0b;--fg:#f2f2f2;--mut:#a0a0a0;--line:#262626;--card:#151515}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:17px/1.65 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+.wrap{max-width:760px;margin:0 auto;padding:0 20px}
+header{padding:28px 0;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid var(--line)}
+header .brand{display:flex;align-items:center;gap:10px;font-weight:700;font-size:20px;letter-spacing:-.01em}
+header .brand svg{width:28px;height:28px}
+a{color:inherit}
+header a.gh{font-size:15px;color:var(--mut);text-decoration:none}
+header a.gh:hover{color:var(--fg)}
+h1{font-size:clamp(40px,8vw,64px);line-height:1.05;letter-spacing:-.03em;margin:64px 0 16px}
+.sub{font-size:21px;color:var(--mut);margin:0 0 24px;max-width:36em}
+.badge{display:inline-block;font:600 13px/1 ui-monospace,Menlo,monospace;padding:7px 10px;border:1px solid var(--line);border-radius:99px;color:var(--mut)}
+h2{font-size:26px;letter-spacing:-.02em;margin:56px 0 12px}
+p{margin:0 0 16px}
+ul{padding-left:20px}li{margin:6px 0}
+.grid{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));margin:16px 0}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px}
+.card b{display:block;margin-bottom:4px}
+.card span{color:var(--mut);font-size:15px}
+pre{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px;overflow:auto;font:14px/1.55 ui-monospace,Menlo,monospace}
+footer{margin:72px 0 40px;padding-top:20px;border-top:1px solid var(--line);color:var(--mut);font-size:14px;display:flex;gap:16px;flex-wrap:wrap;justify-content:space-between}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header><a class="brand" href="/" style="text-decoration:none"><svg viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M8 23V9l8 9 8-9v14" fill="none" stroke="var(--bg)" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/></svg>ModelAny</a><nav style="display:flex;gap:18px"><a class="gh" href="/api/">API</a><a class="gh" href="/about/">About</a><a class="gh" href="https://github.com/vincemakes">GitHub</a></nav></header>
+<main>
+<h1>ModelAny API</h1>
+<p class="sub">One endpoint and one key for language, image and video models. In development.</p>
+<span class="badge">In development</span>
+<h2>How the ModelAny API is meant to work</h2>
+<p>The ModelAny API is planned as a single gateway in front of many AI model providers. You authenticate once with a ModelAny key and choose a model by name in each request. Moving to a different model is meant to be a change of that name, not a new SDK, a new account or a new invoice.</p>
+<p>The request format is planned to follow the widely used OpenAI-compatible style for chat and completion calls, so existing client libraries can point at ModelAny by changing the base URL and key.</p>
+<h2>Planned pieces</h2>
+<ul>
+<li><b>One key, many models</b>: create and revoke keys in one console; the gateway checks them on every call.</li>
+<li><b>Language, image and video</b>: synchronous calls for text, and asynchronous tasks with status and result URLs for image and video generation.</li>
+<li><b>Usage logs</b>: per-call and per-task records, so you can see which model and key used what.</li>
+<li><b>One balance</b>: prepaid balance and billing records for all models in the same place.</li>
+</ul>
+<h2>What it is not</h2>
+<p>ModelAny is not a chat app or a browser extension, and it does not train models. It is an API for developers and teams who build products on top of existing models.</p>
+<h2>Status</h2>
+<p>The API is not public yet. There are no sign-ups, no waitlist and nothing to buy today. When it opens, this page will carry the real documentation.</p>
+</main>
+<footer><span>ModelAny is built by <a href="https://github.com/vincemakes">vincemakes</a>.</span><a href="https://github.com/vincemakes">github.com/vincemakes</a></footer>
+</div>
+</body>
+</html>
